@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card quantity</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <button onclick="
+        console.log(`Cart quantity: ${cartQuantity}`);
+      ">Show Quantity</button>
+
+    <button onclick="
+      if (cartQuantity <= 9) {
+        cartQuantity++;
+      } else {
+        console.log('The cart is full');
+      }  
+      console.log(`Cart quantity: ${cartQuantity}`);
+  ">Add to cart</button>
+
+    <button onclick="
+    if (cartQuantity <= 8) {
+      cartQuantity += 2;
+    } else {
+      console.log('The cart capacity is 10, if you add 2... well, it\'s enought what you have');
+    }
+      console.log(`Cart quantity: ${cartQuantity}`);
+  ">+2</button>
+
+    <button onclick="
+    if (cartQuantity <= 7) {
+      cartQuantity += 3;
+    } else {
+      console.log('The cart capacity is 10, if you add 3... well, it\'s enought what you have');
+    }
+      console.log(`Cart quantity: ${cartQuantity}`);
+  ">+3</button>
+
+    <button onclick="
+      cartQuantity = 0;
+      console.log('Cart was reset.');
+      console.log(`Cart quantity: ${cartQuantity}`);
+  ">Reset Cart</button>
+
+
+
+  <button onclick="
+  if (cartQuantity >= 2) {
+    cartQuantity -= 2;
+  } else {
+    console.log('Well.. you can\'t give more than you have, do you?');
+  }
+    console.log(`Cart quantity: ${cartQuantity}`);
+  ">-2</button>
+
+  <button onclick="
+  if (cartQuantity >= 3) {
+    cartQuantity -= 3;
+  } else {
+    console.log('Well.. you can\'t give more than you have, do you?');
+  }
+    console.log(`Cart quantity: ${cartQuantity}`);
+  ">-3</button>
+
+
+    <script>
+      let cartQuantity = 0;
+      
+    </script>
+    
+  </body>
+</html>
