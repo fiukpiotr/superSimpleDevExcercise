@@ -1,0 +1,115 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>functions</title>
+</head>
+<body>
+
+  <!-- -------------------- g -->
+  <p>
+    <button onclick="updateCalculation('1')">1</button>    
+    <button onclick="updateCalculation('2')">2</button>
+    <button onclick="updateCalculation('3')">3</button>
+    <button onclick="updateCalculation(' + ')">+</button>
+  </p>
+  <p>
+    <button onclick="updateCalculation('4')">4</button>
+    <button onclick="updateCalculation('5')">5</button>
+    <button onclick="updateCalculation('6')">6</button>
+    <button onclick="updateCalculation(' - ')">-</button>
+  </p>
+  <p>
+    <button onclick="updateCalculation('7')">7</button>    
+    <button onclick="updateCalculation('8')">8</button>
+    <button onclick="updateCalculation('9')">9</button>
+    <button onclick="updateCalculation(' * ')">*</button>
+  </p>
+  <p>
+    <button onclick="updateCalculation('0')">0</button>    
+    <button onclick="updateCalculation('.')">.</button>
+    <button onclick="
+    calculation = eval(calculation);
+    console.log(calculation);
+  ">=</button>
+
+  <button onclick="
+    updateCalculation(' / ');
+  ">/</button>
+</p>
+
+<p>
+  <button onclick="
+    calculation = '';
+    console.log(calculation);
+  ">Clear</button>
+</p>
+
+
+  <script>
+    // function function1() {
+    //   console.log('hello');
+    //   console.log(2 + 2);
+    // }
+
+    // function1();
+    // function1();
+
+    // function calculateTax(cost, taxPercent = 0.1) {
+    //   console.log(cost * taxPercent);
+    // }
+
+    // calculateTax(2000, 0.2);
+
+    // calculateTax(5000);
+
+    // --------------- Excercises 7a/b/c/
+    //
+    // let name;
+    // const name = 'Piotr';
+    // function greet() {
+    //   if (! name) {
+    //     console.log('Hi there!');
+    //   } else {
+    //     console.log(`hello ${name}`);
+    //   }
+    // }
+    // greet();
+
+    // --------------- d/e/f  
+    //
+    // function convertToFahrenheit(celcius) {
+    //   return (celcius * 9 / 5) + 32;
+    // }
+    //
+    // function convertToCelcius(fahrenheit) {
+    //   return (fahrenheit - 32) * 5 / 9;
+    // }
+    //
+    // function convertTemperature(degrees, unit) {
+    //   if (unit === 'C') {
+    //     const result = convertToFahrenheit(degrees);
+    //     return `${result}°F`;
+    //   } 
+    //   else if (unit === 'F') {
+    //     const result = convertToCelcius(degrees);
+    //     return `${result}°C`;
+    //   }
+    // }
+    // console.log(convertTemperature(25,'C'));
+    // console.log(convertTemperature(77,'F'));
+
+    // ----------------- g
+    //
+    let calculation = '';
+    function updateCalculation(value) {
+      calculation += value;
+      console.log(calculation);
+    }
+
+  </script>
+</body>
+</html>
