@@ -33,7 +33,6 @@
   updateCartQuantity(5);
   ">+5</button>
 
-  <!-- vvv This code was changed. vvv -->
   <button onclick="
   updateCartQuantity(-1);
   ">Remove from cart</button>
@@ -43,7 +42,6 @@
 
   <button onclick="updateCartQuantity(-3);
   ">-3</button>
-  <!-- ^^^ This code was changed. ^^^ -->
 
   <button onclick="
     cartQuantity = 0;
@@ -53,20 +51,21 @@
 
   <script>
     let cartQuantity = 0;
-
     
     function updateCartQuantity(change) {
-        if (cartQuantity + change > 10) {
-          alert('The cart is full');
-
-        } else if (cartQuantity + change < 0) {
-          alert('Not enough items in the cart');
-
-        } else {
-          cartQuantity += change;
-          console.log(`Cart quantity: ${cartQuantity}`);
-        }
+      if (cartQuantity + change > 10) {
+        alert('The cart is full');
+        return;
       }
+
+      if (cartQuantity + change < 0) {
+        alert('Not enough items in the cart');
+        return;
+      }
+      
+      cartQuantity += change;
+      console.log(`Cart quantity: ${cartQuantity}`);
+    }
   </script>
 </body>
 </html>
