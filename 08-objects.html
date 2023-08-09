@@ -56,7 +56,7 @@
       const jsonStrng = JSON.stringify(product2);
       console.log(JSON.parse(jsonStrng));
 */
-
+/*
       console.log('hello'.length);
       console.log('hello'.toUpperCase());
 
@@ -100,6 +100,31 @@
       
       console.log(object5);
       object5.method();
+*/
+      function comparePrice(product1, product2) {
+        if (product1.price > product2.price) {
+          return product2;
+        } else {
+          return product1;
+        };
+      }
+
+
+      const product1 = {
+        name: 'basketball',
+        price: 2095
+      };
+      product1.price += 500;
+
+      const product2 = {
+        name: 'basketball',
+        price: 2095
+      }
+
+      console.log(comparePrice(product1, product2));
+
+      console.log((product1.name.toUpperCase()).repeat(2));
+
 
     </script>
   </body>
