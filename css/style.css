@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  padding: 30px;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+.content:last-child {
+  border: none;
+}
+
+
+.subscribe-button {
+  padding: 10px 15px;
+  background-color: black;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.is-subscribed {
+  background-color: rgb(246, 246, 246);
+  color: black;
+}
+
+.input-container {
+  margin: 30px 0;
+}
+
+.cost-input {
+  font-size: 15px;
+  padding: 10px;
+}
+
+.calculate-button {
+  border: none;
+  background-color: green;
+  color: white;
+  font-size: 15px;
+  padding: 12px 15px;
+  cursor: pointer;
+}
+
+.total {
+  text-align: left;
+}
