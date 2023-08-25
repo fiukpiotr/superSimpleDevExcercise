@@ -23,14 +23,16 @@ body {
 .calculation-result-window {
   background-color: rgb(15, 15, 15);
   width: 90%;
-  height: 200px;
+  min-height: 170px;
+  height: 100%;
   border: 1px solid gray;
   padding: 15px;
   font-size: 3rem;
   display: flex;
   justify-content: end;
-  align-items: end;
-  flex-wrap: wrap;
+  align-items: start;
+  word-wrap: break-word;
+  display: inline-block;
 }
 
 button {
