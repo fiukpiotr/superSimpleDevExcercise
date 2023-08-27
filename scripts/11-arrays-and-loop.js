@@ -103,17 +103,22 @@
         i++;
       }
       
-      // const nums = [1, 1, 3];
+      // FUNKCJA PODWAJAJĄCA ZAWARTOŚĆ LISTY (zatrzymuje loop w momencie gdy na liście pojawia się 0)
       function doubleArray(nums) {
 
         const numsDoubled = [];
         for (let i = 0 ; i < nums.length ; i++) {
           const num = nums[i];
+          if ( num === 0 ) {
+            return numsDoubled;
+          }
           numsDoubled.push(num * 2)
         }
-        console.log(numsDoubled);
+        // console.log(numsDoubled);
+        return numsDoubled;
       }
-
+      console.log(doubleArray([2, 4, 0, 14, 5]));
+      // EXAMPLES
       console.log('stop3');
       
       doubleArray([1, 1, 3]);
