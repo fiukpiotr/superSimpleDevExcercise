@@ -53,6 +53,7 @@
       //   console.log(value);
       // }
 
+      /*
       const nums = [1, 1, 3];
 
       let total = 0;
@@ -68,3 +69,63 @@
         numsDoubled.push(num * 2)
       }
       console.log(numsDoubled);
+      */
+
+      const array1 = [1, 2, 3];
+      const array2 = array1.slice();
+      array2.push(4);
+
+      console.log(array1);
+      console.log(array2);
+
+      const [firstValue, secondValue] = [1, 2, 3];
+
+      for (let i = 1 ; i <= 10 ; i++) {
+        if (i % 3 === 0) {
+          continue;
+        }
+        console.log(i);
+        if (i === 8) {
+          break;
+        }
+      }
+
+      console.log('stop1');
+      
+      let i = 1;
+      
+      while (i <= 10) {
+        if ( i % 3 === 0) {
+          i++;
+          continue;
+        }
+        console.log(i);
+        i++;
+      }
+      
+      // const nums = [1, 1, 3];
+      function doubleArray(nums) {
+
+        const numsDoubled = [];
+        for (let i = 0 ; i < nums.length ; i++) {
+          const num = nums[i];
+          numsDoubled.push(num * 2)
+        }
+        console.log(numsDoubled);
+      }
+
+      console.log('stop3');
+      
+      doubleArray([1, 1, 3]);
+      
+      console.log('stop4');
+      
+      doubleArray([2, 2, 5])
+      
+      console.log('stop5');
+
+      doubleArray([2, 4, 6, 14, 5])
+
+
+
+
