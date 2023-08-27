@@ -1,3 +1,19 @@
+
+const buttonElement = document.querySelector('.js-btn');
+
+
+const eventListener = () => {
+  console.log('click');
+}
+
+buttonElement.addEventListener('click', eventListener);
+
+buttonElement.removeEventListener('click', eventListener);
+
+buttonElement.addEventListener('click', () => {
+  console.log('click2');
+});
+
 /* function greeting() {
   console.log('hello');
 }
@@ -54,14 +70,57 @@ setInterval(
 
 console.log('next line 2'); */
 
-[
+/* [
   'make dinner',
   'wash dishes',
   'watch youtube'
-].forEach(function(value, index) {
+].forEach((value, index) => {
   if (value === 'wash dishes') {
     return;
   }
   console.log(index + 1);
   console.log(value);
 });
+
+const regularFunction = function(param, param2) {
+  console.log('hello');
+  return 5;
+}
+
+const arrowFunction = (param, param2) => {
+  console.log('hello');
+  return 5;
+};
+
+arrowFunction();
+regularFunction();
+
+const oneParam = param => {
+  console.log(param + 1);
+};
+oneParam(2);
+
+
+// const oneLine = () => {
+//   return 2 + 3
+// }; 
+//
+// THIS ABOVE IS THE SAME AS THIS ONELINE THING BELOW
+// `{}` and `return` statement are optional
+
+console.log('arrowFunction oneLine:');
+const oneLine = () => 2 + 3;
+
+console.log(oneLine());
+
+const object2 = {
+  method: () => {
+
+  },
+  // SHORTHAND METHOD SYNTAX BELOW
+  method(){
+
+  }
+} 
+*/
+
