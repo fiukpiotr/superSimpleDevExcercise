@@ -1,4 +1,4 @@
-
+/* 
 const buttonElement = document.querySelector('.js-btn');
 
 
@@ -12,7 +12,7 @@ buttonElement.removeEventListener('click', eventListener);
 
 buttonElement.addEventListener('click', () => {
   console.log('click2');
-});
+}); */
 
 /* function greeting() {
   console.log('hello');
@@ -124,3 +124,22 @@ const object2 = {
 } 
 */
 
+console.log([1, -3, 5].filter((value, index) =>
+{
+  
+//   if (value >= 0) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+//
+// TO PONIŻEJ JEST SKRÓTEM TEGO CO POWYŻEJ, heh
+  return value >= 0;
+}));
+
+console.log(
+[1, 1, 3].map((value, index) => {
+  return value * 2;  
+}));
+//SHORTEN BELOW
+console.log( [1, 1, 3].map( value => value * 2 ) );
