@@ -27,14 +27,13 @@ function renderTodoList() {
 
   document.querySelector('.js-todo-list')
     .innerHTML = todoListHTML;
-
     document.querySelectorAll('.js-todo-delete-btn')
     .forEach((deleteButton, index) => {
       deleteButton.addEventListener('click', () => {
         todoList.splice(index, 1);
         renderTodoList();
-      })
-    })
+      });
+    });
   };
 
 
