@@ -27,14 +27,19 @@ let intervalId;
 function autoPlay() {
   if (!isAutoPlaying) {
     intervalId = setInterval(() => {
-        const playerMove = pickComputerMove();
-        playGame(playerMove);
-      }
-    , 1000);
+      const playerMove = pickComputerMove();
+      playGame(playerMove);
+    }, 1000);
     isAutoPlaying = true;
+  
+    document.querySelector('.js-auto-play-btn')
+      .innerHTML = 'Stop Playing';
+
   } else {
     clearInterval(intervalId);
     isAutoPlaying = false;
+    document.querySelector('.js-auto-play-btn')
+      .innerHTML = 'Auto Play';
   }
 }
 
